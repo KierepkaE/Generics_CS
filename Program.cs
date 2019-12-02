@@ -10,9 +10,7 @@ namespace generics {
             Func<int, int> square = number => number * number;
 
             Console.WriteLine (square (5));
-            static int Square (int number) {
-                return number * number;
-            }
+
         }
     }
 }
