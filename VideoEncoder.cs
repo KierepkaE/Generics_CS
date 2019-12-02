@@ -18,9 +18,9 @@ namespace generics {
       OnVideoEncoded ();
     }
 
-    protected virtual void OnVideoEncoded () {
+    protected virtual void OnVideoEncoded (Video video) {
       if (VideoEncoded != null)
-        VideoEncoded (this, VideoEventArgs.Empty);
+        VideoEncoded (this, VideoEventArgs () { Video = video });
 
     }
   }
