@@ -7,8 +7,9 @@ namespace generics {
             // Lambda
             // number => number * number
 
-            Func<int, int> square = Square;
+            Func<int, int> square = number => number * number;
 
+            Console.WriteLine (square (5));
             static int Square (int number) {
                 return number * number;
             }
