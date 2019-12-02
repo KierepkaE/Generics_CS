@@ -8,6 +8,10 @@ namespace generics {
             // number => number * number
 
             Func<int, int> square = Square;
+
+            static int Square (int number) {
+                return number * number;
+            }
         }
     }
 }
