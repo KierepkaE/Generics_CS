@@ -9,7 +9,7 @@ namespace generics {
     // 2 Define an event
     // 3 Raise the event
 
-    public delegate void VideoEncodedEventHandler (object source, EventArgs args);
+    public delegate void VideoEncodedEventHandler (object source, VideoEventArgs args);
     public event VideoEncodedEventHandler VideoEncoded;
 
     public void Encode (Video video) {
@@ -20,7 +20,7 @@ namespace generics {
 
     protected virtual void OnVideoEncoded () {
       if (VideoEncoded != null)
-        VideoEncoded (this, EventArgs.Empty);
+        VideoEncoded (this, VideoEventArgs.Empty);
 
     }
   }
