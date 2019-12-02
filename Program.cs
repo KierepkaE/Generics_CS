@@ -11,6 +11,12 @@ namespace generics {
 
             Console.WriteLine (square (5));
 
+            const int factor = 5;
+            Func<int, int> multiply = n => n * factor;
+
+            var result = multiply (10);
+            System.Console.WriteLine (result);
+
         }
     }
 }
