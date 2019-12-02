@@ -21,6 +21,7 @@ namespace generics {
     protected virtual void OnVideoEncoded () {
       if (VideoEncoded != null)
         VideoEncoded (this, EventArgs.empty);
+
     }
   }
 }
