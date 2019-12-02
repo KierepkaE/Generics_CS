@@ -15,12 +15,12 @@ namespace generics {
     public void Encode (Video video) {
       System.Console.WriteLine ("Encoding video in progress . . . ");
       Thread.Sleep (3000);
-      OnVideoEncoded ();
+      OnVideoEncoded (video);
     }
 
     protected virtual void OnVideoEncoded (Video video) {
       if (VideoEncoded != null)
-        VideoEncoded (this, VideoEventArgs () { Video = video });
+        VideoEncoded (this, new VideoEventArgs () { Video = video });
 
     }
   }
